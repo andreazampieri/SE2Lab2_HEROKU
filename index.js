@@ -1,12 +1,20 @@
-var http = require('http');
+var http = require("http");
+var express = require("express");
+var util = require("util");
 
-var server = http.createServer(function(req,res)
+var port = 5000;
+
+var app = express();
+app.set("port",(process.env.PORT || port));
+
+app.use("/",function(request,response)		//app.use va sia per get che per post
 {
-	res.writeHead(200,{'Content-Type':'text/plain'})
-	res.end("helloworld!");
+	response.end("helloworld!");
+
 });
 
-server.listen(42424,'127.0.0.1');
 
-console.log('Server running on localhost:42424');
+
+app.listen(port,"localhost");
+
 
