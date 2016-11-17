@@ -13,8 +13,4 @@ app.use("/",function(request,response)		//app.use va sia per get che per post
 
 });
 
-
-
 app.listen(port,"localhost");
-
-
