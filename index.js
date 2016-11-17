@@ -6,7 +6,7 @@ var server = http.createServer(function(req,res)
 	res.end("helloworld!");
 });
 
-server.listen(1337,'127.0.0.1');
+server.listen(42424,'127.0.0.1');
 
-console.log('Server running on localhost:1337');
+console.log('Server running on localhost:42424');
 
